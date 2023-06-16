@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mainViewModel"
+            type="com.example.myapplication.presentation.createscreen.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_dp_43"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_dp_43"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:layout_marginTop="@dimen/dimen_dp_8"
+                android:layout_marginEnd="@dimen/dimen_dp_16"
+                android:background="@drawable/et_bg_shape"
+                android:hint="@string/user_name"
+                android:paddingStart="@dimen/dimen_dp_16"
+                android:paddingEnd="@dimen/dimen_dp_16"
+                android:text="@={mainViewModel.userName}"
+                android:textColor="@color/gray_dark"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/dimen_sp_16"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/user_age"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_dp_43"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:layout_marginTop="@dimen/dimen_dp_8"
+                android:layout_marginEnd="@dimen/dimen_dp_16"
+                android:background="@drawable/et_bg_shape"
+                android:hint="@string/user_age"
+                android:inputType="phone"
+                android:paddingStart="@dimen/dimen_dp_16"
+                android:paddingEnd="@dimen/dimen_dp_16"
+                android:text="@={mainViewModel.userAge}"
+                android:textColor="@color/gray_dark"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/dimen_sp_16"
+                tools:ignore="RtlSymmetry" />
+
+            <EditText
+                android:id="@+id/user_job_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_dp_43"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:layout_marginTop="@dimen/dimen_dp_8"
+                android:layout_marginEnd="@dimen/dimen_dp_16"
+                android:background="@drawable/et_bg_shape"
+                android:hint="@string/user_job_title"
+                android:inputType="text"
+                android:paddingStart="@dimen/dimen_dp_16"
+                android:paddingEnd="@dimen/dimen_dp_16"
+                android:text="@={mainViewModel.userJobTitle}"
+                android:textColor="@color/gray_dark"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/dimen_sp_16"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_dp_54"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:layout_marginTop="@dimen/dimen_dp_8"
+                android:layout_marginEnd="@dimen/dimen_dp_16">
+
+                <Spinner
+                    android:id="@+id/gender_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_dp_43"
+                    android:background="@drawable/et_bg_shape"
+                    android:paddingStart="@dimen/dimen_dp_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_dp_16"
+                    android:background="@drawable/text_lable_bg"
+                    android:gravity="top"
+                    android:paddingLeft="@dimen/dimen_dp_6"
+                    android:paddingRight="@dimen/dimen_dp_6"
+                    android:text="@string/gender"
+                    android:textColor="@color/grey_ish_brown"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/create_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_dp_54"
+                android:background="@drawable/btn_bg"
+                android:onClick="@{() -> mainViewModel.createPressed()}"
+                android:paddingStart="@dimen/dimen_dp_16"
+                android:paddingTop="@dimen/dimen_dp_8"
+                android:paddingEnd="@dimen/dimen_dp_16"
+                android:paddingBottom="@dimen/dimen_dp_8"
+                android:text="@string/create"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_sp_18"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/root_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/payment_item_cardView_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_dp_10"
+    android:layout_marginBottom="@dimen/dimen_dp_18"
+    app:cardBackgroundColor="@color/gray_white"
+    app:cardCornerRadius="@dimen/dimen_dp_8"
+    app:cardElevation="@dimen/dimen_dp_4"
+    app:cardPreventCornerOverlap="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_item_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_dp_8"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/dimen_dp_8"
+                android:text="@string/user_name"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/dimen_sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/expand_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/expand_item"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_dp_16"
+            android:paddingBottom="@dimen/dimen_dp_16">
+
+
+            <TextView
+                android:id="@+id/age_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:text="@string/age"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_dp_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sp_16"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/age_lable"
+                app:layout_constraintStart_toEndOf="@+id/age_lable"
+                app:layout_constraintTop_toTopOf="@+id/age_lable" />
+
+            <TextView
+                android:id="@+id/gender_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:text="@string/gender"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/age_lable" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_dp_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sp_16"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/gender_lable"
+                app:layout_constraintStart_toEndOf="@+id/gender_lable"
+                app:layout_constraintTop_toTopOf="@+id/gender_lable" />
+
+            <TextView
+                android:id="@+id/job_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_dp_16"
+                android:text="@string/user_job_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gender_lable" />
+
+            <TextView
+                android:id="@+id/jobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_dp_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_sp_16"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/job_lable"
+                app:layout_constraintStart_toEndOf="@+id/job_lable"
+                app:layout_constraintTop_toTopOf="@+id/job_lable" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

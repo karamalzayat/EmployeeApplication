@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="user_name">user name</string>
+    <string name="gender">Gender:</string>
+    <string name="user_age">User age\n</string>
+    <string name="user_job_title">Job Title:</string>
+    <string name="create">Create</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="finish">Finish</string>
+    <string name="age">Age:</string>
+</resources>
